@@ -1,0 +1,198 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Section One -->
+    <RelativeLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2">
+    
+        <RelativeLayout
+            android:elevation="4dp"
+            android:background="@drawable/roundEdges"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:src="@drawable/atlas"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"/>
+
+            <ImageView
+                android:src="@drawable/phonecall"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_toRightOf="@+id/profileImage"
+                android:text="Atlas"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/locationInfo"
+                android:layout_below="@+id/userName"
+                android:layout_toRightOf="@+id/profileImage"
+                android:text="Manchester, MI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_below="@+id/locationInfo"
+                android:layout_toRightOf="@id/profileImage"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/starRatingImgV"
+                    android:tint="@color/colorGoldStar"
+                    android:src="@drawable/star"                   
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+
+                <ImageView                
+                    android:src="@drawable/star"    
+                    android:tint="@color/colorGoldStar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+
+                <ImageView                
+                    android:src="@drawable/star"
+                    android:tint="@color/colorGoldStar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+
+                <ImageView                
+                    android:src="@drawable/star"   
+                    android:tint="@color/colorGoldStar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+
+                <ImageView                
+                    android:src="@drawable/star"  
+                    android:tint="@color/colorGoldStar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+            
+            
+            </LinearLayout>
+        
+        
+        </RelativeLayout>
+    
+    </RelativeLayout>
+
+    <!-- Section Two -->
+    <RelativeLayout
+        android:layout_weight=".22"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:text="$1,000,000.00"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/accountBalanceTitleTextView"
+            android:layout_above="@+id/balanceTextView"
+            android:text="Account Balance"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+    
+    
+    </RelativeLayout>
+
+    <!-- Section Three-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/roundedges"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/friendImgView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/atlas"
+                android:layout_marginRight="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_toRightOf="@+id/friendImgView"
+                android:text="Transfer to Billum"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+             <TextView
+                android:id="@+id/transferDateTextView"
+                android:layout_toRightOf="@+id/friendImgView"
+                android:layout_below="@+id/descriptionTextView"
+                android:text="dd-mmm-yyyy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+             <TextView
+                android:id="@+id/transferAmt"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:textColor="@color/negBal"
+                android:text="-$50.00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+             <TextView
+                android:id="@+id/viewButton"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/transferAmt"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        
+        </RelativeLayout>
+        
+
+    
+    
+    </LinearLayout>
+
+</LinearLayout>
